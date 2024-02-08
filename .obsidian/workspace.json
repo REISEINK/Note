@@ -1,0 +1,264 @@
+{
+  "main": {
+    "id": "9087b20db4e24971",
+    "type": "split",
+    "children": [
+      {
+        "id": "6127638b7381bda4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a5521e0621bbc86d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 Strand-based Hair/1 PBDs in Physics Simulation of Hair Strand.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e4507d3d939e86fe",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "1 Strand-based Hair/1 PBDs in Physics Simulation of Hair Strand.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b6443581a930cfcc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Temp/UE 动画系统.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0a35537e6376e479",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.4.13"
+              }
+            }
+          },
+          {
+            "id": "ef0e0ba3c56a3982",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Work Note/TODO.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "3f07a569f199d5b0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "4 Cloth/ClothConfig各参数含义.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 5
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7888328c9bdc2a1c",
+    "type": "split",
+    "children": [
+      {
+        "id": "4be4f7e1149ae5d2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f5923ffeabc7c593",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "7e7481790dd53682",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "c17b3deae7c12cba",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "ede781fe6985b781",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "121a1c7fb72d1cf0",
+    "type": "split",
+    "children": [
+      {
+        "id": "48b3b9d278ff057f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cb6b131c43ef3d1c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "4 Cloth/ClothConfig各参数含义.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f9fbee529547220a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "4 Cloth/ClothConfig各参数含义.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d906c07d84bb2625",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "1c7a5c239563ecaa",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "4 Cloth/ClothConfig各参数含义.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "f5923ffeabc7c593",
+  "lastOpenFiles": [
+    "4 Cloth/ClothSimulationNV and NvCloth.md",
+    "4 Cloth/Note for NVIDIA PhysX SDK 3.4.0 Cloth.md",
+    "4 Cloth/NvCloth代码详解.md",
+    "4 Cloth/ClothConfig各参数含义.md",
+    "Work Note/TODO.md",
+    "Work Note/布料、骨骼链相关.md",
+    "Work Note/备忘.md",
+    "1 Strand-based Hair/Groom Emitter.md",
+    "1 Strand-based Hair/Question.md",
+    "1 Strand-based Hair/1 PBDs in Physics Simulation of Hair Strand.md",
+    "4 Cloth/NvCloth-.md",
+    "Notes",
+    "未命名.canvas",
+    "1 Strand-based Hair/3 Algorithms in Physics Simulation of Hair Strand.md",
+    "1 Strand-based Hair/2 Constraints in Physics Simulation of Hair Strand.md",
+    "Figure/Pasted image 20230531102943.png",
+    "Figure/Pasted image 20230531102940.png",
+    "Figure/Pasted image 20230531103027.png",
+    "Figure/GAMES104_Lecture11_Physics System_Applications.jpg",
+    "Figure/图片1.png",
+    "Figure/Snipaste_2023-07-12_10-53-24.png",
+    "Figure/SIGGRAPH2022-Advances-Enemies-Ciardi et al.jpg",
+    "Figure/TressFX_SDF.png",
+    "Work Note/UGroomComponent一些参数的意义.md",
+    "Figure/Pasted image 20240124170244.png",
+    "Figure/Pasted image 20240123164038.png",
+    "3 Animation/11 Animation Systems(Game Engine Architecture).md",
+    "2 Shadow/UE5 Per Object Shadow流程浅析.md",
+    "4 Cloth",
+    "Unreal/UE5.1 Groom物理模拟浅析(1).md",
+    "Work Note/未命名",
+    "Temp/UE 动画系统.md",
+    "Temp/标题.md",
+    "~$网易云失效.docx",
+    "网易云失效.docx",
+    "新建 Microsoft Word 文档.docx",
+    "网易云失效.txt",
+    "新建文本文档.txt",
+    "新建文件夹",
+    "Unreal/未命名.md",
+    "Work Note",
+    "Hair/paper/未命名.md",
+    "Unreal/Hair Strands/Temp.md",
+    "Unreal/Readme.md",
+    "Hair/Hair Strand in UE5.1.md"
+  ]
+}
