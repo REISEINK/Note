@@ -71,7 +71,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "4 Cloth/ClothConfig各参数含义.md",
+                "file": "4 Cloth/1 Note for NVIDIA PhysX SDK 3.4.0 Cloth.md",
                 "mode": "source",
                 "source": false
               }
@@ -152,7 +152,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "4 Cloth/ClothConfig各参数含义.md",
+                "file": "4 Cloth/1 Note for NVIDIA PhysX SDK 3.4.0 Cloth.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -169,7 +169,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "4 Cloth/ClothConfig各参数含义.md",
+                "file": "4 Cloth/1 Note for NVIDIA PhysX SDK 3.4.0 Cloth.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -192,7 +192,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "4 Cloth/ClothConfig各参数含义.md"
+                "file": "4 Cloth/1 Note for NVIDIA PhysX SDK 3.4.0 Cloth.md"
               }
             }
           }
@@ -213,18 +213,20 @@
       "command-palette:打开命令面板": false
     }
   },
-  "active": "f5923ffeabc7c593",
+  "active": "3f07a569f199d5b0",
   "lastOpenFiles": [
+    "4 Cloth/2 ClothConfig各参数含义.md",
+    "4 Cloth/1 Note for NVIDIA PhysX SDK 3.4.0 Cloth.md",
+    "3 Animation/11 Animation Systems(Game Engine Architecture).md",
     "4 Cloth/ClothSimulationNV and NvCloth.md",
-    "4 Cloth/Note for NVIDIA PhysX SDK 3.4.0 Cloth.md",
+    "4 Cloth/3 NvCloth注意事项.md",
     "4 Cloth/NvCloth代码详解.md",
-    "4 Cloth/ClothConfig各参数含义.md",
     "Work Note/TODO.md",
     "Work Note/布料、骨骼链相关.md",
+    "1 Strand-based Hair/1 PBDs in Physics Simulation of Hair Strand.md",
     "Work Note/备忘.md",
     "1 Strand-based Hair/Groom Emitter.md",
     "1 Strand-based Hair/Question.md",
-    "1 Strand-based Hair/1 PBDs in Physics Simulation of Hair Strand.md",
     "4 Cloth/NvCloth-.md",
     "Notes",
     "未命名.canvas",
@@ -241,7 +243,6 @@
     "Work Note/UGroomComponent一些参数的意义.md",
     "Figure/Pasted image 20240124170244.png",
     "Figure/Pasted image 20240123164038.png",
-    "3 Animation/11 Animation Systems(Game Engine Architecture).md",
     "2 Shadow/UE5 Per Object Shadow流程浅析.md",
     "4 Cloth",
     "Unreal/UE5.1 Groom物理模拟浅析(1).md",
