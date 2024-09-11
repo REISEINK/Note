@@ -1,0 +1,230 @@
+{
+  "main": {
+    "id": "9087b20db4e24971",
+    "type": "split",
+    "children": [
+      {
+        "id": "907a617b670959f4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "83ab1c217372c48f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "TODO/TODO.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "f2f2032fe2336920",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Blog/1 Physics Simulation/Position Based Dynamics.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "39a0dc7c10ed14cd",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.6.7"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7888328c9bdc2a1c",
+    "type": "split",
+    "children": [
+      {
+        "id": "4be4f7e1149ae5d2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f5923ffeabc7c593",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "7e7481790dd53682",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "c17b3deae7c12cba",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "ede781fe6985b781",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 254.5
+  },
+  "right": {
+    "id": "121a1c7fb72d1cf0",
+    "type": "split",
+    "children": [
+      {
+        "id": "48b3b9d278ff057f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cb6b131c43ef3d1c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "TODO/TODO.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f9fbee529547220a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "TODO/TODO.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d906c07d84bb2625",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "1c7a5c239563ecaa",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "TODO/TODO.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false
+    }
+  },
+  "active": "83ab1c217372c48f",
+  "lastOpenFiles": [
+    "LICENSE",
+    "Infomation",
+    "Information/Slides/Games104",
+    "Information/Slides/新建文件夹",
+    "TODO.md",
+    "TODO/TODO.md",
+    "Information/Source Code",
+    "Information/N",
+    "Information/新建文件夹",
+    "Information/Slides",
+    "Information/Paper",
+    "Blog/3 Cloth/2 NvCloth布料模拟浅析.md",
+    "Blog/1 Physics Simulation/Position Based Dynamics.md",
+    "Blog/1 Physics Simulation",
+    "未命名",
+    "Blog/3 Cloth/3 NvCloth源码浅析.md",
+    "Blog/3 Cloth/1 Note for NVIDIA PhysX SDK 3.4.0 Cloth.md",
+    "Blog/3 Cloth/4 ChaosCloth vs NvCloth.md",
+    "Blog/4 Cloth/NvCloth代码详解.md",
+    "Blog/Temp/UE 动画系统.md",
+    "TODO/Work Note/TODO.md",
+    "Blog/4 Cloth/3 NvCloth注意事项.md",
+    "Blog/2 Strand-based Hair/1 PBDs in Physics Simulation of Hair Strand.md",
+    "TODO/Work Note/布料、骨骼链相关.md",
+    "Note/Course Note/Game Animation and Physics/Games103/Lecture 02 Math Background Vector, Matrix and Tensor Calculus.md",
+    "Note/Course Note/Game Animation and Physics/Games103/Lecture 01 Intro to Physics-Based Animation.md",
+    "Blog/Unreal/未命名.md",
+    "Blog/4 Shadow/UE5 Per Object Shadow流程浅析.md",
+    "Blog/2 Strand-based Hair/3 Algorithms in Physics Simulation of Hair Strand.md",
+    "Blog/2 Strand-based Hair/2 Constraints in Physics Simulation of Hair Strand.md",
+    "TODO/Work Note/UGroomComponent一些参数的意义.md",
+    "TODO/Work Note/备忘.md",
+    "Note/Course Note/Game Animation and Physics/未命名.md",
+    "Note/Book Note/未命名.md",
+    "Figure/Pasted image 20240327202326.png",
+    "Figure/Pasted image 20240327202245.png",
+    "Figure/Pasted image 20240327202228.png",
+    "Figure/Pasted image 20240327202203.png",
+    "Information/WebPage/1-Cloth — NVIDIA PhysX SDK 3_4_0 Documentation.md",
+    "Information/WebPage/向量点乘与叉乘的概念及几何意义.md",
+    "Figure/01_intro_2.jpg",
+    "Figure/01_intro.jpg",
+    "未命名.canvas",
+    "Figure/Pasted image 20230531102943.png",
+    "Figure/Pasted image 20230531102940.png",
+    "Figure/Pasted image 20230531103027.png",
+    "Figure/GAMES104_Lecture11_Physics System_Applications.jpg"
+  ]
+}
