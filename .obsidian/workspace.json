@@ -1,0 +1,225 @@
+{
+  "main": {
+    "id": "9087b20db4e24971",
+    "type": "split",
+    "children": [
+      {
+        "id": "f3f74858b22b0cde",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c29e5020ea34923f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Blog/3 Physics Engine/PhysX/RigidBody implemation in PhysX 3.4.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "RigidBody implemation in PhysX 3.4"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7888328c9bdc2a1c",
+    "type": "split",
+    "children": [
+      {
+        "id": "4be4f7e1149ae5d2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f5923ffeabc7c593",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "7e7481790dd53682",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "c17b3deae7c12cba",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
+            }
+          },
+          {
+            "id": "ede781fe6985b781",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 254.5
+  },
+  "right": {
+    "id": "121a1c7fb72d1cf0",
+    "type": "split",
+    "children": [
+      {
+        "id": "48b3b9d278ff057f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cb6b131c43ef3d1c",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "TODO.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for TODO"
+            }
+          },
+          {
+            "id": "f9fbee529547220a",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "TODO.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from TODO"
+            }
+          },
+          {
+            "id": "d906c07d84bb2625",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "1c7a5c239563ecaa",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "TODO.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of TODO"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "c29e5020ea34923f",
+  "lastOpenFiles": [
+    "Blog/3 Physics Engine/PhysX/TODO.md",
+    "Blog/3 Physics Engine/PhysX/TEMP.md",
+    "Book/game-engine-architecture-3rd.pdf",
+    "Note/Course Note/Game Animation and Physics/未命名.md",
+    "TODO.md",
+    "Note/Course Note/Game Animation and Physics/Games103/Lecture 02 Math Background Vector, Matrix and Tensor Calculus.md",
+    "Note/Course Note/Game Animation and Physics/Games103/Lecture 01 Intro to Physics-Based Animation.md",
+    "Blog/3 Physics Engine/PhysX/Snippets",
+    "Blog/3 Physics Engine/PhysX/RigidBody implemation in PhysX 3.4.md",
+    "Blog/3 Physics Engine/PhysX/PhysX User Guide Doc Note",
+    "Blog/3 Physics Engine/PhysX",
+    "Blog/3 Physics Engine",
+    "Blog/新建文件夹",
+    "Note/Course Note/Game Animation and Physics/Games105/1.md",
+    "Note/Course Note/Game Animation and Physics/Games202/1.md",
+    "Figure/01_intro.jpg",
+    "Blog/Unreal/未命名.md",
+    "TODO/TODO.md",
+    "TODO/Work Note/UGroomComponent一些参数的意义.md",
+    "TODO/Work Note/TODO.md",
+    "TODO/Work Note/布料、骨骼链相关.md",
+    "TODO/Work Note/备忘.md",
+    "Blog/Temp/标题.md",
+    "Blog/Temp/UE 动画系统.md",
+    "Blog/5 Animation/Animation/Kawaii Physics, Anim  Dynaimcs和RigidBody.md",
+    "Blog/2 Animation/PhysX/TODO.md",
+    "Blog/2 Animation/PhysX/Snippets",
+    "Blog/2 Animation/PhysX/Untitled.md",
+    "Blog/2 Animation/PhysX/TEMP.md",
+    "Blog/2 Animation/PhysX/PhysX User Guide Doc Note",
+    "Blog/2 Animation/Animation/Reference.md",
+    "Blog/2 Animation/Animation/Kawaii Physics, Anim  Dynaimcs和RigidBody.md",
+    "Blog/2 Animation/Animation/Data Structure in Animation.md",
+    "Blog/2 Animation/Animation/AnimNode.md",
+    "Blog/2 Animation/PhysX",
+    "Blog/2 Animation/Animation",
+    "Figure/Pasted image 20250120170949.png",
+    "Figure/Pasted image 20240327202326.png",
+    "Figure/Pasted image 20240327202245.png",
+    "Figure/Pasted image 20240327202228.png",
+    "Figure/Pasted image 20240327202203.png",
+    "Figure/01_intro_2.jpg",
+    "未命名.canvas",
+    "Figure/Pasted image 20230531102943.png",
+    "Figure/Pasted image 20230531102940.png",
+    "Figure/Pasted image 20230531103027.png"
+  ]
+}
