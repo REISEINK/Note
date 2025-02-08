@@ -1,1 +1,15 @@
-{}
+{
+  "editor:open-search": [],
+  "editor:toggle-bold": [],
+  "editor:delete-paragraph": [],
+  "switcher:open": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "T"
+    }
+  ],
+  "workspace:undo-close-pane": []
+}

@@ -1,5 +1,8 @@
 [
   "obsidian-annotator",
   "obsidian-linter",
-  "obsidian-local-rest-api"
+  "obsidian-local-rest-api",
+  "editor-width-slider",
+  "pdf-plus",
+  "obsidian-vimrc-support"
 ]
