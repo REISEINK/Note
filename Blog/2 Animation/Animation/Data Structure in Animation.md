@@ -14,8 +14,7 @@
 
 ##### USkeleton 关键成员
 ```C++ 
-class USkeleton : public UObject, public IInterface_AssetUserData, public 
-	IInterface_PreviewMeshProvider
+class USkeleton : public UObject, public IInterface_AssetUserData, public IInterface_PreviewMeshProvider
 {
 	friend class UAnimationBlueprintLibrary;
 	friend class FSkeletonDetails;

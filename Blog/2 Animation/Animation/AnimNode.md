@@ -12,27 +12,22 @@ struct AnimNode_Base
 
 	// 在动画节点第一次运行时调用。如果动画结点处于状态机或者缓存姿势分支内，可以被多次调用
 	// Q: 动画结点处于状态机或者缓存姿势分支内，具体是啥场景
-	ENGINE_API virtual void Initialize_AnyThread(const FAnimationInitializeContext&
-		Context);
+	ENGINE_API virtual void Initialize_AnyThread(const FAnimationInitializeContext& Context);
 
 	// 缓存此节点需要跟踪(Track)的骨骼
-	ENGINE_API virtual void CacheBones_AnyThread(const FAnimationCacheBonesContext&
-		Context);
+	ENGINE_API virtual void CacheBones_AnyThread(const FAnimationCacheBonesContext& Context);
 
 	// 更新相对于此节点的图(Graph)状态
 	// Q: Graph指的是啥?AnimGraph?
-	ENGINE_API virtual void Update_AnyThread(const FAnimationUpdateContext& 
-		Context);
+	ENGINE_API virtual void Update_AnyThread(const FAnimationUpdateContext& Context);
 
 	// 根据Update方法中设置的权重来评估局部空间的骨骼变换。
 	ENGINE_API virtual void Evaluate_AnyThread(FPoseContext& Output);
 
 	
 	// 根据Update方法中设置的权重来评估组件空间的骨骼变换。
-	ENGINE_API virtual void EvaluateComponentSpace_AnyThread(
-		FComponentSpacePoseContext& Output);
+	ENGINE_API virtual void EvaluateComponentSpace_AnyThread(FComponentSpacePoseContext& Output);
 
-	
 	
 }
 ```
@@ -40,7 +35,8 @@ struct AnimNode_Base
 
 ### AnimNode核心方法调用流程
 
-* USkeletalMeshComponent::TickComponent
+##### Init, Cache, Update
+* USkinnedMeshComponent::TickComponent
 	* USkeletalMeshComponent::TickPose
 		* void USkeletalMeshComponent::TickAnimation
 			* USkeletalMeshComponent::TickAnimInstances
@@ -55,6 +51,27 @@ struct AnimNode_Base
 								* UpdateAnimationNode
 									* **FAnimNode_Base::Update_AnyThread**
 
+##### Evaluate
+- USkinnedMeshComponent::TickComponent
+	- USkeletalMeshComponent::RefreshBoneTransforms
+		* USkeletalMeshComponent::DoParallelEvaluationTasks_OnGameThread
+			* USkeletalMeshComponent::ParallelAnimationEvaluation
+				* USkeletalMeshComponent::PerformAnimationProcessing
+					* USkeletalMeshComponent::EvaluateAnimation
+						* UAnimInstance::ParallelEvaluateAnimation
+							* FAnimInstanceProxy::EvaluateAnimation
+								* FAnimInstanceProxy::EvaluateAnimation_WithRoot
+									* FAnimInstanceProxy::EvaluateAnimationNode_WithRoot
+										* **FAnimNode_Base::Evaluate_AnyThread**
+
+以FAnimNode_SkeletalControlBase::EvaluateComponentSpace_AnyThread为例，最后通过持有的PoseLink对象调用Evaluate调到EvaluateComponentSpace_AnyThread
+* FAnimNode_Base::Evaluate_AnyThread
+	* FPoseLink::Evaluate
+		* ……
+		* FAnimNode_ConvertComponentToLocalSpace::Evaluate_AnyThread
+			* FComponentSpacePoseLink::EvaluateComponentSpace
+				* FAnimNode_SkeletalControlBase::EvaluateComponentSpace_AnyThread
+
 Q: 数据如何传输、计算
 
 ### FAnimNode_SkeletalControlBase
@@ -64,8 +81,7 @@ Q: 数据如何传输、计算
 继承了FAnimNode_Base，骨架控制相关的AnimNode会继承该基类。核心的方法，Initialize、CacheBones、Update、Evaluate相较于FAnimNode_Base，加了一个递归调用连接的节点对应函数的功能。
 ##### Initialize_AnyThread
 ```c++
-void FAnimNode_SkeletalControlBase::Initialize_AnyThread(const
-	FAnimationInitializeContext& Context)  
+void FAnimNode_SkeletalControlBase::Initialize_AnyThread(const FAnimationInitializeContext& Context)  
 {  
 	DECLARE_SCOPE_HIERARCHICAL_COUNTER_ANIMNODE(Initialize_AnyThread) 
 
@@ -98,8 +114,7 @@ void FPoseLinkBase::Initialize(const FAnimationInitializeContext& InContext)
 
 ##### CacheBones_AnyThread
 ```c++
-void FAnimNode_SkeletalControlBase::CacheBones_AnyThread(const
-FAnimationCacheBonesContext& Context)  
+void FAnimNode_SkeletalControlBase::CacheBones_AnyThread(const FAnimationCacheBonesContext& Context)  
 {  
 	FAnimNode_Base::CacheBones_AnyThread(Context);
 
@@ -148,16 +163,16 @@ void FAnimNode_SkeletalControlBase::Update_AnyThread(const
 }
 
 // 在SkeletalControlBase这里又是虚函数，只是声明了COUNTER
-void FAnimNode_SkeletalControlBase::UpdateInternal(const FAnimationUpdateContext&
-	Context)  
+void FAnimNode_SkeletalControlBase::UpdateInternal(const FAnimationUpdateContext& Context)  
 {  
 	DECLARE_SCOPE_HIERARCHICAL_COUNTER_ANIMNODE(UpdateInternal)  
 }
 ```
 
 ##### Evaluate_AnyThread
-```c++
-```
+
+
+Evaluete_AnyThread -> EvaluateComponentPose_AnyThread -> EvaluateSkeletalControl_AnyThread
 ## Reference
 [虚幻引擎 动画节点（AnimNode）详解 - 知乎](https://zhuanlan.zhihu.com/p/611398524)
 [从源码深入理解Unreal动画系统_ue 动画蓝图源码解析-CSDN博客](https://blog.csdn.net/hacning/article/details/134463920)
