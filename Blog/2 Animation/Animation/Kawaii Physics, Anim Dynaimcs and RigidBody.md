@@ -137,10 +137,10 @@ class ENGINE_API FAnimPhysRigidBody : public FAnimPhysState
 
 
 #### 物理模拟
-物理模拟的核心流程还是在FAnimNode_AnimDynamics::EvaluateSkeletalControl_AnyThread函数里，一样地，此处会省略一些代码。
+物理模拟的核心流程写在FAnimPhys::PhysicsUpdate函数里，跟Kawaii Physics相似，会先在FAnimNode_AnimDynamics::EvaluateSkeletalControl_AnyThread进行一些数据的预计算。
 
-
-```c++
+##### EvaluateSkeletalControl_AnyThread
+```cpp
 if (ShouldDoPhysicsUpdate() && NextTimeStep > AnimPhysicsMinDeltaTime)
 {
 	// 把重力方向转换到模拟空间
@@ -163,9 +163,67 @@ if (ShouldDoPhysicsUpdate() && NextTimeStep > AnimPhysicsMinDeltaTime)
 			SimBodies.Add(BaseBodyPtrs[ActiveIndex]);
 		}
 	}
+
+	// 计算Component的线性速度和线性加速度, 并反向累加到SimBody的线性加速度
+	FVector ComponentLinearAcc(0.0f);
+
+	if (SimulationSpace != AnimPhysSimSpaceType::World)  
+	{
+		ComponentLinearAcc += TransformWorldVectorToSimSpace(Output, -ComponentLinearVelocity) * Scale;
+		ComponentLinearAcc += TransformWorldVectorToSimSpace(Output, -ComponentLinearAcceleration) * Scale;
+	}
+
+	const float MaxDeltaTime = MaxPhysicsDeltaTime;  
+  
+	NextTimeStep = FMath::Min(NextTimeStep, MaxDeltaTime);  
+  
+	UpdateLimits(Output);
+
+	// 物理更新
+	FAnimPhys::PhysicsUpdate(NextTimeStep, SimBodies, LinearLimits, AngularLimits, Springs, 
+	SimSpaceGravityDirection, OrientedExternalForce, ComponentLinearAcc, NumSolverIterationsPreUpdate, 
+	NumSolverIterationsPostUpdate);
 }
 
 ```
+
+##### FAnimPhys::PhysicsUpdate
+```cpp
+for (FAnimPhysRigidBody* Body : Bodies)  
+{  
+	// 对冲量进行damping, 计算风力、重力
+	InitializeBodyVelocity(DeltaTime, Body, GravityDirection); 
+
+	// 计算外力
+	if(!ExternalForce.IsNearlyZero())  
+	{  
+		for(FAnimPhysRigidBody* Body : Bodies)  
+		{     
+			Body->LinearMomentum += ExternalForce * DeltaTime;  
+		}
+	}
+
+	// 计算外加速度，这里的外加速度就是上边算的ComponentLinearAcc
+	if (!ExternalLinearAcc.IsNearlyZero())  
+	{  
+		for (FAnimPhysRigidBody* Body : Bodies)  
+		{      
+			if (Body->InverseMass > UE_KINDA_SMALL_NUMBER)  
+			{         
+				Body->LinearMomentum += ((ExternalLinearAcc / Body->InverseMass) * DeltaTime); 
+			}  
+		}
+	}
+
+	// 计算骨骼间弹簧弹力 Q: 为啥用基于力的方法？实际使用有OverShooting问题
+	for (FAnimPhysSpring& Spring : Springs)  
+	{  
+		Spring.ApplyForces(DeltaTime);  
+	}
+	
+}
+```
+
 ## Reference
 1. [【UE笔记】记一个AnimNode_RigidBody的坑 - 知乎](https://zhuanlan.zhihu.com/p/483945074)
 2. [动态骨骼Dynamic Bone算法详解 - 知乎](https://zhuanlan.zhihu.com/p/49188230) ^aa7b58
