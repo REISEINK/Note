@@ -120,7 +120,67 @@ if (DistSquared < Bone.PhysicsSettings.Radius * Bone.PhysicsSettings.Radius || F
 }
 ```
 
+##### Adjust by Angle Limit
+```c++
+// 限制角度为0时不处理
+if (Bone.PhysicsSettings.LimitAngle == 0.0f)  
+{  
+   return;  
+}  
 
+// 计算当前的骨骼方向和初始状态时骨骼方向，并计算两者角度之差
+FVector BoneDir = (Bone.Location - ParentBone.Location).GetSafeNormal();  
+const FVector PoseDir = (Bone.PoseLocation - ParentBone.PoseLocation).GetSafeNormal();  
+const FVector Axis = FVector::CrossProduct(PoseDir, BoneDir);  
+const float Angle = FMath::Atan2(Axis.Size(), FVector::DotProduct(PoseDir, BoneDir));  
+const float AngleOverLimit = FMath::RadiansToDegrees(Angle) - Bone.PhysicsSettings.LimitAngle;  
+
+// 根据角度差调整骨骼位置
+if (AngleOverLimit > 0.0f)  
+{  
+   BoneDir = BoneDir.RotateAngleAxis(-AngleOverLimit, Axis.GetSafeNormal());  
+   Bone.Location = BoneDir * (Bone.Location - ParentBone.Location).Size() + ParentBone.Location;  
+}
+```
+
+
+##### BoneConstraint
+新版本才引入的功能。应该是为了解决多骨骼链时，不同骨骼链模拟之间互相独立的问题（比如披风使用多条骨骼链制作，可能会出现骨骼链之间散开，不维持固定的距离的问题）。具体而言，对于资产给定的骨骼对，使用XPBD方法求解距离约束C(P) = |P1 - P2|。
+```c++
+void FAnimNode_KawaiiPhysics::AdjustByBoneConstraints()  
+{  
+   for (FModifyBoneConstraint& BoneConstraint : MergedBoneConstraints)  
+   {      SCOPE_CYCLE_COUNTER(STAT_KawaiiPhysics_AdjustByBoneConstraint);  
+  
+      if (!BoneConstraint.IsValid())  
+      {         
+	      continue;  
+      }  
+      FKawaiiPhysicsModifyBone& ModifyBone1 = ModifyBones[BoneConstraint.ModifyBoneIndex1];  
+      FKawaiiPhysicsModifyBone& ModifyBone2 = ModifyBones[BoneConstraint.ModifyBoneIndex2];  
+      EXPBDComplianceType ComplianceType = BoneConstraint.bOverrideCompliance  
+	      ? BoneConstraint.ComplianceType: BoneConstraintGlobalComplianceType;  
+  
+      FVector Delta = ModifyBone2.Location - ModifyBone1.Location;  
+      float DeltaLength = Delta.Size();  
+      if (DeltaLength <= 0.0f)  
+      {         
+	      continue;  
+      }  
+
+      float Compliance = XPBDComplianceValues[static_cast<int32>(ComplianceType)];  
+      Compliance /= DeltaTime * DeltaTime;  
+
+	  // 2 = ModifyBone1.invMass + ModifyBone2.invMass
+      float DeltaLambda = (Constraint - Compliance * BoneConstraint.Lambda) / (2 + Compliance); 
+      Delta = (Delta / DeltaLength) * DeltaLambda;  
+  
+      ModifyBone1.Location += Delta;  
+      ModifyBone2.Location -= Delta;  
+      BoneConstraint.Lambda += DeltaLambda;  
+   }
+}
+```
 ### Anim Dynamics
 
 #### 相关数据结构
