@@ -59,7 +59,7 @@ FVector BaseLocation = ParentBone.Location + (BonePoseLocation - ParentBonePoseL
 Bone.Location += (BaseLocation - Bone.Location) *  (1.0f - FMath::Pow(1.0f - Bone.PhysicsSettings.Stiffness, Exponent));
 ```
 这一步会根据Stiffness往将骨骼动画位置靠近，让Stiffness控制骨骼链的刚度，Stiffness越大，骨骼链越接近刚体。这里与Dynamic Bone图中(2)->(3)过程中（详见[[#^aa7b58]])，骨骼往理想位置靠近从而模拟弹性运动，是正好相同的。（不如说整体思路都很相似）
-![[Pasted image 20250120170949.png]]
+![](https://raw.githubusercontent.com/REISEINK/Note/master/Figure/Pasted%20image%2020250120170949.png)
 
 ##### Collision
 

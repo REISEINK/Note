@@ -8,19 +8,19 @@
 
 **Volumetric Methods for Simulation and Rendering of Hair**
 A drag term for each hair is then computed based on the velocity difference between the hair particle and the grid velocity. ... For example, if a particle is moving faster than its neighbors, with velocity smoothing it will slow down.
-![[Pasted image 20230531102943.png]]
+![](https://raw.githubusercontent.com/REISEINK/Note/master/Figure/Pasted%20image%2020230531102943.png)
 
-![[Pasted image 20230531103027.png]]
+![](https://raw.githubusercontent.com/REISEINK/Note/master/Figure/Pasted%20image%2020230531103027.png)
 
 #### Volume Preservation
-![[Pasted image 20230531103111.png]]
+![](https://raw.githubusercontent.com/REISEINK/Note/master/Figure/Pasted%20image%2020230531103111.png)
 #### Velocity Field
 
-This velocity is rasterized to![[Pasted image 20230531103111.png]] a grid and made divergence free using the Chorin projection method. The divergence free velocity field is compared to the original grid velocity field, and this difference is interpolated to the particles and applied as an impulse.
+This velocity is rasterized to![](https://raw.githubusercontent.com/REISEINK/Note/master/Figure/Pasted%20image%2020230531103111.png) a grid and made divergence free using the Chorin projection method. The divergence free velocity field is compared to the original grid velocity field, and this difference is interpolated to the particles and applied as an impulse.
 
 由于水流不会凭空产生或消失，即不可压缩流体的总散度必为零。在流体力学中，散度指流体运动时单位体积的改变率。
 
-![[Pasted image 20230601103400.png]]
+![](https://raw.githubusercontent.com/REISEINK/Note/master/Figure/Pasted%20image%2020230601103400.png)
 #### Pressure Grid
 
 #### Fluid Drag
@@ -42,8 +42,8 @@ This velocity is rasterized to![[Pasted image 20230531103111.png]] a grid and ma
 
 ### SDF(有向距离场)
 
-![[TressFX_SDF.png]]
+![](https://raw.githubusercontent.com/REISEINK/Note/master/Figure/TressFX_SDF.png)
 
-![[TressFX_SDF2.png]]
+![](https://raw.githubusercontent.com/REISEINK/Note/master/Figure/TressFX_SDF2.png)
 
 

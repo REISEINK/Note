@@ -33,15 +33,15 @@ PhysicsAsset用于计算碰撞约束，
 ##### Store Groom State
 将粒子当前的Position和Orientation保存至PreviousPosition和PreviousOrientation，PreviousPosition和PreviousOrientation会参与后续的计算。
 同时计算当前例子是否能够移动或者旋转（一根发丝由多个粒子组成，如下图所示），Groom默认是设置为第一个和第二个粒子不能移动，第一个粒子不能旋转（靠近头的粒子认为它会跟随头保持相对静止）。
-![[Pasted image 20230712104332.png]]
+![](https://raw.githubusercontent.com/REISEINK/Note/master/Figure/Pasted%20image%2020230712104332.png)
 
 ##### UpdateGroomVelocity
 计算流体阻力，可以参考寒霜视频中的Friction部分。将Groom粒子网格化，然后每个粒子的速度跟所属网格的平均速度做加权计算以模拟流体阻力。
-![[Pasted image 20230712104903.png]]
+![](https://raw.githubusercontent.com/REISEINK/Note/master/Figure/Pasted%20image%2020230712104903.png)
 
 ##### RewindGroomState
 XPBD算法中的Velocity Damping。详见PBD和XPBD论文的Damping一节。
-![[Snipaste_2023-07-12_10-53-24.png]]
+![](https://raw.githubusercontent.com/REISEINK/Note/master/Figure/Snipaste_2023-07-12_10-53-24.png)
 
 ##### Attach Groom Roots
 插值相关，略。
